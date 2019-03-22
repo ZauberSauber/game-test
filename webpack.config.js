@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/game.js',
+        app: './src/game.ts',
     },
     output: {
         filename: "[name].bundle.js",
@@ -15,7 +15,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Welcome'
+            title: 'Welcome',
+            template: './template/index.html',
         }),
         new webpack.HotModuleReplacementPlugin(),
     ],
@@ -32,6 +33,12 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.(ttf|eot|woff|woff2|png|ico|jpg|jpeg|gif|bg\.svg)$/i,
+                use: [{
+                    loader: 'file-loader',
+                }],
             }
         ]
     },
