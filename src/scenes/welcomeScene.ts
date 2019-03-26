@@ -13,11 +13,11 @@ export default class WelcomeScene extends Phaser.Scene {
 
 
     create(): void {
-        const titleText: string = 'Starfall';
+        const titleText: string = 'Welcome to meow games';
         const hintText: string = 'Starfall';
 
-        this.title = this.add.text(150, 200, titleText, {
-            font: '128px Arial Bold',
+        this.title = this.add.text(25, 200, titleText, {
+            font: '72px Arial Bold',
             fill: '#fbfbac',
         });
 

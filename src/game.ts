@@ -22,7 +22,7 @@ const config: GameConfig = {
             debug: false,
         }
     },
-    backgroundColor: '#45ad04',
+    backgroundColor: '#939393',
 };
 
 export class MeowGame extends Phaser.Game {

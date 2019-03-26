@@ -1,5 +1,7 @@
 import 'phaser';
 
+import starImg from '../../assets/star.png';
+
 
 export default class GameScene extends Phaser.Scene {
     delta: number;
@@ -25,8 +27,7 @@ export default class GameScene extends Phaser.Scene {
 
 
     preload(): void {
-        this.load.setBaseURL('https://raw.githubusercontent.com/mariyadavydova/starfall-phaser3-typescript/master/');
-        this.load.image('star', 'assets/star.png');
+        this.load.image('star', starImg);
     }
 
 
